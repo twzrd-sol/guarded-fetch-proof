@@ -49,7 +49,7 @@ const res = await payingFetch("https://paid-api.example/resource");
 ```
 
 Install the peers yourself — they are optional peers npm will not add for you:
-`npm install twzrd-x402-gate@0.9.16 @x402/core @x402/fetch @x402/svm @solana/kit`.
+`npm install twzrd-x402-gate@0.11.2 @x402/core @x402/fetch @x402/svm @solana/kit`.
 
 Notes:
 - `@x402/core` ≥ 2.23 applies its own default spend controls (recognized assets, $1 per payment) **before** TWZRD runs; a payment over that is refused by core, not TWZRD.
@@ -57,6 +57,6 @@ Notes:
 
 ## Versions
 
-Pinned: `twzrd-x402-gate` 0.9.16, `@x402/core|fetch|svm` 2.27.0, `@solana/kit` 5.5.1, `@solana-program/token-2022` 0.6.1. Node ≥ 20.
+Pinned: `twzrd-x402-gate` 0.11.2, `@x402/core|fetch|svm` 2.27.0, `@solana/kit` 5.5.1, `@solana-program/token-2022` 0.6.1. Node ≥ 20.
 
 MIT license.
