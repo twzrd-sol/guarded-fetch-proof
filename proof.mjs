@@ -1,4 +1,4 @@
-// Pre-sign refusal proof for twzrd-x402-gate@0.9.16.
+// Pre-sign refusal proof for twzrd-x402-gate@0.11.4.
 //
 // A loopback merchant serves a real x402 v2 402 (mainnet USDC, $0.001). The
 // buyer is the official stack: @x402/fetch -> @x402/core x402Client ->
@@ -136,7 +136,7 @@ async function run(label, payTo) {
 const untrusted = await run("untrusted_payTo", UNTRUSTED);
 const control = await run("positive_control", CONTROL);
 const ok = untrusted.signerInvocations === 0 && untrusted.merchantPaid === 0 && control.signerInvocations === 1 && control.httpStatus === 200;
-console.log(JSON.stringify({ package: "twzrd-x402-gate@0.9.16", integration: INTEGRATION, untrusted, control, ok }, null, 2));
+console.log(JSON.stringify({ package: "twzrd-x402-gate@0.11.4", integration: INTEGRATION, untrusted, control, ok }, null, 2));
 if (!ok) {
   console.error("PROOF FAILED: expected untrusted signerInvocations = 0 and control signerInvocations = 1");
   process.exit(1);
